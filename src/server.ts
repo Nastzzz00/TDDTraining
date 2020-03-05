@@ -9,15 +9,7 @@ import { resolvers, typeDefs } from "./graphql";
 import bodyParser from "body-parser";
 import serveIndex from "serve-index";
 
-import {
-  userModel,
-  addressModel,
-  supplierModel,
-  supplierStatusModel,
-  itemModel,
-  purchaseOrderModel,
-  scheduleLineModel
-} from "./models";
+import {} from "./models";
 
 import * as controllers from "./controllers";
 
@@ -37,82 +29,10 @@ mongoose
 // The ApolloServer constructor requires two parameters: your schema
 // definition and your set of resolvers.
 
-const {
-  getAllDataDB,
-  getByIDDB,
-  DeleteRecordByIDDB,
-  getAllByItemDB,
-  getAllBySupplierStatusDB,
-  getAllByScheduleLineDB,
-  //User controllers
-  createCreateUserDB,
-  //Supplier controllers
-  createCreateSupplierDB,
-  updateSupplierByIDDB,
-  //SupplierStatus
-  createCreateSupplierStatusDB,
-  updateSupplierStatusByIDDB,
-  //Item
-  createCreateItemDB,
-  updateItemByIDDB,
-  //Purchase Order
-  createCreatePurchaseOrderDB,
-  updatePurchaseOrderByIDDB,
-  //Schedule Line
-  createCreateScheduleLineDB,
-  updateScheduleLineByIDDB
-} = controllers;
+const {} = controllers;
 
 const context = async session => {
-  return {
-    //User
-    createUser: createCreateUserDB(userModel),
-    getAllUsers: getAllDataDB(userModel),
-    getUserById: getByIDDB(userModel),
-    deleteUserById: DeleteRecordByIDDB(userModel),
-    //Adress
-    getAddressById: getByIDDB(addressModel),
-    getAllAddress: getAllDataDB(addressModel),
-    //Supplier
-    createSupplier: createCreateSupplierDB(supplierModel),
-    getAllSuppliers: getAllDataDB(supplierModel),
-    getSupplierById: getByIDDB(supplierModel),
-    deleteSupplierById: DeleteRecordByIDDB(supplierModel),
-    updateSupplierById: updateSupplierByIDDB(supplierModel),
-    //SupplierStatus
-    createSupplierStatus: createCreateSupplierStatusDB(supplierStatusModel),
-    updateSupplierStatusById: updateSupplierStatusByIDDB(supplierStatusModel),
-    deleteSupplierStatusById: DeleteRecordByIDDB(supplierStatusModel),
-    getSupplierStatusById: getByIDDB(supplierStatusModel),
-    getAllSupplierStatus: getAllDataDB(supplierStatusModel),
-    //Item
-    createItem: createCreateItemDB(itemModel),
-    updateItemById: updateItemByIDDB(itemModel),
-    deleteItemById: DeleteRecordByIDDB(itemModel),
-    getItemById: getByIDDB(itemModel),
-    getAllItems: getAllDataDB(itemModel),
-    getAllSupplierStatusByItem: getAllBySupplierStatusDB(itemModel),
-    getAllScheduleLinesByItem: getAllByScheduleLineDB(itemModel),
-    //Purchase Order
-    createPurchaseOrder: createCreatePurchaseOrderDB(purchaseOrderModel),
-    updatePurchaseOrderById: updatePurchaseOrderByIDDB(purchaseOrderModel),
-    deletePurchaseOrderbyId: DeleteRecordByIDDB(purchaseOrderModel),
-    getPurchaseOrderById: getByIDDB(purchaseOrderModel),
-    getAllPurchaseOrders: getAllDataDB(purchaseOrderModel),
-    getAllSupplierStatusByPurchaseOrder: getAllBySupplierStatusDB(
-      purchaseOrderModel
-    ),
-    getAllItemsByPurchaseOrder: getAllByItemDB(purchaseOrderModel),
-    //Schedule Line
-    createScheduleLine: createCreateScheduleLineDB(scheduleLineModel),
-    updateScheduleLine: updateScheduleLineByIDDB(scheduleLineModel),
-    deleteScheduleLineById: DeleteRecordByIDDB(scheduleLineModel),
-    getScheduleLineById: getByIDDB(scheduleLineModel),
-    getAllScheduleLines: getAllDataDB(scheduleLineModel),
-    getAllSupplierStatusByScheduleLine: getAllBySupplierStatusDB(
-      scheduleLineModel
-    )
-  };
+  return {};
 };
 
 const server = new ApolloServer({
