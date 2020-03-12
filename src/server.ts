@@ -9,7 +9,7 @@ import { resolvers, typeDefs } from "./graphql";
 import bodyParser from "body-parser";
 import serveIndex from "serve-index";
 
-import {} from "./models";
+import { catModel } from "./models";
 
 import * as controllers from "./controllers";
 
@@ -29,10 +29,18 @@ mongoose
 // The ApolloServer constructor requires two parameters: your schema
 // definition and your set of resolvers.
 
-const {} = controllers;
+const {
+  //Cat
+  createCreateCatDB,
+  updateCatByIDDB
+} = controllers;
 
 const context = async session => {
-  return {};
+  return {
+    //Cat
+    createCat: createCreateCatDB(catModel),
+    updateCatById: updateCatByIDDB(catModel)
+  };
 };
 
 const server = new ApolloServer({
