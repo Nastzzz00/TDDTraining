@@ -30,7 +30,9 @@ mongoose
 // definition and your set of resolvers.
 
 const {
-  //Cat
+  getAllDataDB,
+  getByIDDB,
+  //cat
   createCreateCatDB,
   updateCatByIDDB
 } = controllers;
@@ -38,8 +40,11 @@ const {
 const context = async session => {
   return {
     //Cat
+
+    getAllCat: getAllDataDB(catModel),
+    getCatById: getByIDDB(catModel),
     createCat: createCreateCatDB(catModel),
-    updateCatById: updateCatByIDDB(catModel)
+    updateCat: updateCatByIDDB(catModel)
   };
 };
 

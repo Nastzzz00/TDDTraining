@@ -1,12 +1,10 @@
-import { makeExecutableSchema } from 'graphql-tools';
+import { mergeTypes } from "merge-graphql-schemas";
 
-import typeDefs from './typeDefs';
-import resolvers from './resolvers';
+import cat from "./cat";
 
-const schema = makeExecutableSchema({
-	typeDefs,
-	resolvers,
-});
+const typeDefs = [cat];
 
-export { typeDefs, resolvers };
-export default schema;
+// NOTE: 2nd param is optional, and defaults to false
+// Only use if you have defined the same type multiple times in
+// different files and wish to attempt merging them together.
+export default mergeTypes(typeDefs, { all: true });

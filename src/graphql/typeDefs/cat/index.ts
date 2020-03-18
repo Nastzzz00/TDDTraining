@@ -30,9 +30,9 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    createCat(input: CreateCatInput!): Cat!
+    createCat(cat: CreateCatInput!): Cat!
     deleteCat(id: ID!): Cat!
-    updateCat(input: UpdateCatInput): Cat!
+    updateCat(cat: UpdateCatInput): Cat!
   }
 `;
 

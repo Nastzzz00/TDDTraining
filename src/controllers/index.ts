@@ -6,6 +6,8 @@ import { updateCatByIDDB } from "./update-cat-db";
 
 export {
   //Cat
+  getAllDataDB,
+  getByIDDB,
   createCreateCatDB,
   updateCatByIDDB
 };
