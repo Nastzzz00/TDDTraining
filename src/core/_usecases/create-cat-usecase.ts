@@ -3,7 +3,7 @@ import { makeCat } from "../cat";
 const createUCCreateCat = () => catInput => {
   const cat = makeCat({
     name: catInput.name,
-    lastName: catInput.lastName,
+    lastname: catInput.lastname,
     breed: catInput.breed
   });
 

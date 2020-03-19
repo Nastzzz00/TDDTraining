@@ -4,7 +4,7 @@ const mockCat = [
   {
     _id: "1",
     name: "Jonas",
-    lastName: "Nepomuceno",
+    lastname: "Nepomuceno",
     breed: "Persian"
   }
 ];

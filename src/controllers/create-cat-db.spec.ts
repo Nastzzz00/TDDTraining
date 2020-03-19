@@ -12,7 +12,7 @@ describe("Create Cat", () => {
     const cat123 = {
       _id: "1",
       name: "Jonas",
-      lastName: "Nepomuceno",
+      lastname: "Nepomuceno",
       breed: "Persian"
     };
 

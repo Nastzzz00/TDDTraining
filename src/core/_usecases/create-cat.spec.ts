@@ -6,7 +6,7 @@ describe("Cat Create", () => {
   it("should create a cat", () => {
     const catInput = {
       name: "Jonas",
-      lastName: "Nepomuceno",
+      lastname: "Nepomuceno",
       breed: "Persian"
     };
 

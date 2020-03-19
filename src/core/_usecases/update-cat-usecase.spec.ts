@@ -5,13 +5,13 @@ describe("UseCase: Update a Cat ", () => {
   it("should be able to update a cat", () => {
     const catInput = {
       name: "Jonas",
-      lastName: "Nepomuceno",
+      lastname: "Nepomuceno",
       breed: "Persian"
     };
 
     const oldValue = {
       name: "Jonas",
-      lastName: "Nepomuceno",
+      lastname: "Nepomuceno",
       breed: "Persian"
     };
     const newCat = updateCat(catInput, oldValue);

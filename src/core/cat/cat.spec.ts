@@ -6,7 +6,7 @@ describe("Cat", () => {
   it("must have a name", () => {
     const cat = {
       name: "",
-      lastName: "Brothers",
+      lastname: "Brothers",
       breed: "Pusakal"
     };
 
@@ -15,7 +15,7 @@ describe("Cat", () => {
   it("must have a lastName", () => {
     const cat = {
       name: "Jonas",
-      lastName: "",
+      lastname: "",
       breed: "Pusakal"
     };
 
@@ -25,7 +25,7 @@ describe("Cat", () => {
   it("must have a breed", () => {
     const cat = {
       name: "Jonas",
-      lastName: "Brothers",
+      lastname: "Brothers",
       breed: ""
     };
 

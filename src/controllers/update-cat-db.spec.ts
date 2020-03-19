@@ -4,7 +4,7 @@ const mockCat = [
   {
     _id: "1",
     name: "Jonas",
-    lastName: "Nepomuceno",
+    lastname: "Nepomuceno",
     breed: "Persian"
   }
 ];
@@ -29,7 +29,7 @@ describe("Update Cat", () => {
   it("should be able to update a cat in the DB", async () => {
     const given = {
       name: "Jonas",
-      lastName: "Nepomuceno",
+      lastname: "Nepomuceno",
       breed: "Persian"
     };
 

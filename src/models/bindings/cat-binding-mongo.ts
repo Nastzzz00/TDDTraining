@@ -16,7 +16,7 @@ const catModel: IDBModel<any> = {
     return address.map(u => ({
       id: u._id.toString(),
       name: u.name,
-      lastName: u.lastName,
+      lastname: u.lastname,
       breed: u.breed
     }));
   },

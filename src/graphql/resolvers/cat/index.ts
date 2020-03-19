@@ -14,7 +14,7 @@ const catResolvers = {
 
       const i = {
         name: cat.name,
-        lastName: cat.lastName,
+        lastname: cat.lastname,
         breed: cat.breed
       };
 
@@ -25,7 +25,7 @@ const catResolvers = {
 
       const i = {
         name: cat.name,
-        lastName: cat.lastName,
+        lastname: cat.lastname,
         breed: cat.breed
       };
 

@@ -1,15 +1,15 @@
 export type TCat = {
   name: string;
-  lastName: string;
+  lastname: string;
   breed: string;
 };
 
 const createMakeCat = () => (cat): TCat => {
-  const { name, lastName, breed } = cat;
+  const { name, lastname, breed } = cat;
   if (!name) {
     throw new Error("Name is required!");
   }
-  if (!lastName) {
+  if (!lastname) {
     throw new Error("lastName is required!");
   }
   if (!breed) {
@@ -17,7 +17,7 @@ const createMakeCat = () => (cat): TCat => {
   }
   return {
     name: name,
-    lastName: lastName,
+    lastname: lastname,
     breed: breed
   };
 };
